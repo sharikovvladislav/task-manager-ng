@@ -1,9 +1,11 @@
 define(['angular'], function (angular) {
-  var module = angular.module('main.myModule', []);
-  module.controller('main.myCtrl', ['$scope', function ($scope) {
+  function mainMyCtrl ($scope) {
+    $scope.onInit = function () {
+      debugger;
+    }
+  }
 
-  }]);
-  module.controller('main.myCtrl3', ['$scope', function ($scope) {
-
-  }])
+  return function (module) {
+    module.controller('main.myCtrl', ['$scope', mainMyCtrl]);
+  };
 });

@@ -13,8 +13,7 @@ define([
     function ($routeProvider) {
       $routeProvider
         .when('/', { templateUrl: '/partials/main.html', controller: 'main.myCtrl' })
-        .when('/view1', { templateUrl: '/partials/view1.html', controller: 'main.myCtrl2' })
-        .when('/view2', { templateUrl: '/partials/view2.html', controller: 'main.myCtrl3' })
+        .when('/view1', { templateUrl: '/partials/view1.html', controller: 'main.myCtrl1' })
         .otherwise({ redirectTo: '/' });
 
     }

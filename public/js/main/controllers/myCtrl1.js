@@ -1,6 +1,10 @@
 define(['angular'], function (angular) {
-  var module = angular.module('main.myModule2', []);
-  module.controller('main.myCtrl2', ['$scope', function ($scope) {
+  function mainMyCtrl1 ($scope, locker) {
+    debugger;
+    var a = locker;
+  }
 
-  }])
+  return function (module) {
+    module.controller('main.myCtrl1', ['$scope', 'common.locker', mainMyCtrl1]);
+  }
 });
