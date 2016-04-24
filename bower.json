@@ -23,6 +23,7 @@
     "html5-boilerplate": "~5.2.0",
     "requirejs": "latest",
     "requirejs-domready": "latest",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "angular-drag-and-drop-lists": "~1.4.0"
   }
 }

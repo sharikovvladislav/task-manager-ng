@@ -7,6 +7,7 @@ require.config({
     'ngProgressLite': '../components/ngprogress-lite/ngprogress-lite',
     'jquery': '../components/jquery/dist/jquery',
     'bootstrap-lib': '../components/bootstrap/dist/js/bootstrap',
+    'ngDragAndDrop': '../components/angular-drag-and-drop-lists/angular-drag-and-drop-lists',
     'app': './app'
   },
   shim: {
@@ -28,6 +29,9 @@ require.config({
     'bootstrap-lib': {
       deps: ['jquery']
     },
+    ngDragAndDrop: {
+      deps: ['angular']
+    },
     angular: {
       exports: 'angular'
     }
@@ -36,7 +40,7 @@ require.config({
 });
 
 // доп либы для ангулара
-define('ngAdditional', ['ngResource', 'ngRoute', 'ngCookies', 'ngProgressLite']);
+define('ngAdditional', ['ngResource', 'ngRoute', 'ngCookies', 'ngProgressLite', 'ngDragAndDrop']);
 
 require(['app', 'ngAdditional', 'bootstrap-lib'], function (app) {
   app.init();

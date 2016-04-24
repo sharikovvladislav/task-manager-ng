@@ -1,7 +1,6 @@
 define(['angular'], function (angular) {
   function mainMyCtrl ($scope) {
-    $scope.onInit = function () {
-    }
+
   }
 
   return function (module) {

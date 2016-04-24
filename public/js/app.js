@@ -3,7 +3,8 @@ define([
 ], function (angular) {
   'use strict';
 
-  var app = angular.module('myApp', ['ngRoute', 'main', 'common']);
+  var dependencies = angular.module('project.dependencies', ['dndLists']),
+    app = angular.module('myApp', ['project.dependencies', 'ngRoute', 'main', 'common']);
 
   app.init = function () {
     angular.bootstrap(document, ['myApp']);
