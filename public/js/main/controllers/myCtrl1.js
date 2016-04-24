@@ -1,7 +1,5 @@
 define(['angular'], function (angular) {
   function mainMyCtrl1 ($scope, locker) {
-    debugger;
-    var a = locker;
   }
 
   return function (module) {
