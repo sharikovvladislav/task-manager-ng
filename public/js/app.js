@@ -1,13 +1,13 @@
 define([
-  'angular', 'moment',  'main/main', 'common/common'
-], function (angular, moment) {
+  'angular', 'window', 'main/main', 'common/common'
+], function (angular, window) {
   'use strict';
 
   var dependencies = angular.module('project.dependencies', ['dndLists']),
     app = angular.module('myApp', ['project.dependencies', 'ngRoute', 'common', 'main']);
 
   app.init = function () {
-    angular.bootstrap(document, ['myApp']);
+    angular.bootstrap(window.document, ['myApp']);
   };
 
   app.config(['$routeProvider',

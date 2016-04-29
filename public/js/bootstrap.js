@@ -42,7 +42,9 @@ require.config({
 
 // доп либы для ангулара
 define('ngAdditional', ['ngResource', 'ngRoute', 'ngCookies', 'ngProgressLite', 'ngDragAndDrop']);
-
+define('window', function () {
+  return window;
+});
 require(['app', 'ngAdditional', 'bootstrap-lib'], function (app) {
   app.init();
 });
