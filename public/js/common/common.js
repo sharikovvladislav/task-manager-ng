@@ -7,5 +7,7 @@ define([
 
   var angular = require('angular');
 
-  return angular.module('common', ['ngRoute', 'common.services', 'common.controllers', 'common.directives', 'common.factories']);
+  return angular.module('common',
+    ['ngRoute', 'common.services', 'common.controllers', 'common.directives', 'common.factories']
+  );
 });
