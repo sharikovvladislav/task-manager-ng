@@ -14,4 +14,5 @@ module.exports = function (grunt) {
   grunt.registerTask('run', ['build', 'http-server:build']);
   grunt.registerTask('http-dev', ['http-server:dev']);
   grunt.registerTask('http-prod', ['http-server:build']);
+  grunt.registerTask('pre-commit', ['eslint']);
 };

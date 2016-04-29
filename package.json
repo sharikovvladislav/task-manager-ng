@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pre-commit": "grunt pre-commit"
   },
+  "pre-commit": [
+    "pre-commit"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -14,6 +18,7 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-eslint": "^18.1.0",
     "grunt-http-server": "^1.16.0",
     "grunt-processhtml": "^0.3.8",
     "jasmine-core": "^2.3.4",

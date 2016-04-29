@@ -21,8 +21,7 @@ define([
   ]);
 
   app.run(['$window', function ($window) {
-    debugger;
-    var a = moment();
+
   }]);
 
   return app;
