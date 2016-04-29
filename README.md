@@ -1,6 +1,6 @@
 Clone
 =====
-```git clone https://github.com/sharikovvladislav/angularjs-requirejs-skeleton.git```
+```git clone https://github.com/sharikovvladislav/task-manager-ng.git```
 
 Install dependencies
 =====
