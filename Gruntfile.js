@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   require('load-grunt-config')(grunt, {
     jitGrunt: true,
-    configPath: path.join(process.cwd(), 'grunt-tasks'),
+    configPath: path.join(process.cwd(), 'grunt-tasks')
   });
 
   grunt.registerTask('build', ['requirejs', 'cssmin', 'processhtml', 'copy']);
