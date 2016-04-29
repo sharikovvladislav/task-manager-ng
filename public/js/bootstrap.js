@@ -8,6 +8,7 @@ require.config({
     'jquery': '../components/jquery/dist/jquery',
     'bootstrap-lib': '../components/bootstrap/dist/js/bootstrap',
     'ngDragAndDrop': '../components/angular-drag-and-drop-lists/angular-drag-and-drop-lists',
+    'moment': '../components/moment/moment',
     'app': './app'
   },
   shim: {

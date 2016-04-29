@@ -24,6 +24,7 @@
     "requirejs": "latest",
     "requirejs-domready": "latest",
     "bootstrap": "~3.3.6",
-    "angular-drag-and-drop-lists": "~1.4.0"
+    "angular-drag-and-drop-lists": "~1.4.0",
+    "moment": "momentjs#~1.7.2"
   }
 }

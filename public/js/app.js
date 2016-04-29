@@ -1,10 +1,10 @@
 define([
-  'angular', 'main/main', 'common/common'
-], function (angular) {
+  'angular', 'moment',  'main/main', 'common/common'
+], function (angular, moment) {
   'use strict';
 
   var dependencies = angular.module('project.dependencies', ['dndLists']),
-    app = angular.module('myApp', ['project.dependencies', 'ngRoute', 'main', 'common']);
+    app = angular.module('myApp', ['project.dependencies', 'ngRoute', 'common', 'main']);
 
   app.init = function () {
     angular.bootstrap(document, ['myApp']);
@@ -21,8 +21,8 @@ define([
   ]);
 
   app.run(['$window', function ($window) {
-    // auth.setAuthorizationHeaders();
-   // user.initialize();
+    debugger;
+    var a = moment();
   }]);
 
   return app;
