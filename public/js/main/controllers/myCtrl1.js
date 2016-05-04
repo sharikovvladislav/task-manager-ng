@@ -16,8 +16,14 @@ define(function () {
 
     // Generate initial model
     for (var i = 1; i <= 3; ++i) {
-      $scope.model.lists[0].items.push({label: "Item A" + i});
-      $scope.model.lists[1].items.push({label: "Item B" + i});
+      $scope.model.lists[0].items.push({
+        label: "Task Today #" + i,
+        type: 'A'
+      });
+      $scope.model.lists[1].items.push({
+        label: "Task Backlog #" + i,
+        type: 'A'
+      });
     }
   }
 

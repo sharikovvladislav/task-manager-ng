@@ -1,6 +1,6 @@
 define([
-  'angular', 'window', 'main/main', 'common/common'
-], function (angular, window) {
+  'angular', 'window', 'main/router', 'main/main', 'common/common'
+], function (angular, window, routerConfigurator) {
   'use strict';
 
   var dependencies = angular.module('project.dependencies', ['dndLists']),
@@ -10,19 +10,9 @@ define([
     angular.bootstrap(window.document, ['myApp']);
   };
 
-  app.config(['$routeProvider',
-    function ($routeProvider) {
-      $routeProvider
-        .when('/', { templateUrl: '/partials/main.html', controller: 'main.myCtrl' })
-        .when('/view1', { templateUrl: '/partials/view1.html', controller: 'main.myCtrl1' })
-        .otherwise({ redirectTo: '/' });
+  routerConfigurator(app);
 
-    }
-  ]);
-
-  app.run(['$window', function ($window) {
-
-  }]);
+  app.run(['$window', function ($window) {}]);
 
   return app;
 });

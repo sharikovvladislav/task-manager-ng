@@ -6,7 +6,8 @@
       dnd-selected="model.selected = item"
       ng-class="{'selected': model.selected === item}"
   >
-    {{item.label}}
+    <div style="display: inline-block;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
+    <div style="display: inline-block;">{{item.label}}</div>
   </li>
   <li class="dndPlaceholder">
     Drop item here
