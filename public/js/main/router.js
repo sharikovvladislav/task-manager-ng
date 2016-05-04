@@ -7,9 +7,9 @@ define(function () {
     application.config(['$routeProvider',
       function ($routeProvider) {
         $routeProvider
-          .when('/', { templateUrl: '/partials/task-manager.html', controller: 'main.myCtrl1' })
-          .when('/view1', { templateUrl: '/partials/view1.html', controller: 'main.myCtrl1' })
-          .when('/task-manager', { templateUrl: '/partials/task-manager.html', controller: 'main.myCtrl1' })
+          .when('/', { templateUrl: '/partials/task-manager.html', controller: 'tm.list' })
+          /*.when('/view1', { templateUrl: '/partials/view1.html', controller: 'main.myCtrl1' })*/
+          .when('/task-manager', { templateUrl: '/partials/task-manager.html', controller: 'tm.list' })
           .otherwise({ redirectTo: '/' });
       }
     ]);

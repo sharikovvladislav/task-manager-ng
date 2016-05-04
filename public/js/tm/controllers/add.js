@@ -4,12 +4,23 @@
 define(function () {
   TaskAddCtrl.$inject = ['$scope'];
   function TaskAddCtrl ($scope) {
-    $scope.model = null;
+    $scope.model = {
+      label: '',
+      type: 'B',
+      duration: '15'
+    };
+
     $scope.ok = function () {
-      $scope.$close('result');
+      if (getFormCtrl().$valid) {
+        $scope.$close($scope.model);
+      }
     };
     $scope.cancel = function () {
-      $scope.$dismiss('result');
+      $scope.$dismiss();
+    };
+
+    function getFormCtrl () {
+      return $scope.AddTaskForm;
     }
   }
 
