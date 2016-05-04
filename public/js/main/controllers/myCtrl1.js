@@ -22,7 +22,7 @@ define(function () {
       });
       $scope.model.lists[1].items.push({
         label: "Task Backlog #" + i,
-        type: 'A'
+        type: 'B'
       });
     }
   }
