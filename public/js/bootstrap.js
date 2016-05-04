@@ -9,6 +9,7 @@ require.config({
     'bootstrap-lib': '../components/bootstrap/dist/js/bootstrap',
     'ngDragAndDrop': '../components/angular-drag-and-drop-lists/angular-drag-and-drop-lists',
     'moment': '../components/moment/moment',
+    'ngBootstrapWithTemplates': '../components/angular-bootstrap/ui-bootstrap-tpls',
     'app': './app'
   },
   shim: {
@@ -33,6 +34,9 @@ require.config({
     ngDragAndDrop: {
       deps: ['angular']
     },
+    ngBootstrapWithTemplates: {
+      deps: ['angular', 'angular']
+    },
     angular: {
       exports: 'angular'
     }
@@ -41,7 +45,9 @@ require.config({
 });
 
 // доп либы для ангулара
-define('ngAdditional', ['ngResource', 'ngRoute', 'ngCookies', 'ngProgressLite', 'ngDragAndDrop']);
+define('ngAdditional', [
+  'ngResource', 'ngRoute', 'ngCookies', 'ngProgressLite', 'ngDragAndDrop', 'ngBootstrapWithTemplates'
+]);
 define('window', function () {
   return window;
 });
