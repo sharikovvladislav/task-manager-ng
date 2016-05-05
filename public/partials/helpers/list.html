@@ -5,11 +5,20 @@
       dnd-effect-allowed="move"
       dnd-selected="model.selected = item"
       ng-class="{'selected': model.selected === item}"
+      style="display: flex; justify-content: space-around;"
   >
-    <div style="display: inline-block;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
-    <div style="display: inline-block;">{{item.label}}</div>
+    <div style="display: inline-block; width: 30px;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
+    <div style="display: inline-block; width: 100%;">{{item.label}}</div>
+    <div style="display: inline-block; width: 40px; text-align: right;"><span class="badge">{{item.duration}}</span></div>
+    <div style="display: inline-block; width: 30px; text-align: center;"><span class="glyphicon glyphicon-ok"></span></div>
   </li>
   <li class="dndPlaceholder">
     Drop item here
+  </li>
+  <li style="display: flex;">
+    <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
+    <div style="display: inline-block; width: 100%;"><span>&nbsp;</span></div>
+    <div style="display: inline-block; width: 40px; text-align: right;"><span class="badge">SUM</span></div>
+    <div style="display: inline-block; width: 30px; text-align: center;"><span>4/5</span></div>
   </li>
 </ul>

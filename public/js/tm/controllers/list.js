@@ -11,7 +11,33 @@ define(function () {
       selected: null,
       lists: [{
         name: 'Today',
-        items: []
+        items: [
+          {
+            label: 'Рассчитать количество возможных вариантов исхода вселенной',
+            duration: '30',
+            type: 'A'
+          },
+          {
+            label: 'Найти виновата в проблеме с ежиками',
+            duration: '120',
+            type: 'B'
+          },
+          {
+            label: 'Погуглить ту смешную фразу',
+            duration: '45',
+            type: 'D'
+          },
+          {
+            label: 'Поинтересоваться у крокодилов сколько времени',
+            duration: '15',
+            type: 'A'
+          },
+          {
+            label: 'Помочь еноту с решением математических задач',
+            duration: '60',
+            type: 'C'
+          }
+        ]
       }, {
         name: 'Backlog',
         items: []
@@ -20,10 +46,6 @@ define(function () {
 
     // Generate initial model
     for (var i = 1; i <= 3; ++i) {
-      $scope.model.lists[0].items.push({
-        label: "Task Today #" + i,
-        type: 'A'
-      });
       $scope.model.lists[1].items.push({
         label: "Task Backlog #" + i,
         type: 'B'
