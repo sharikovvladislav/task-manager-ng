@@ -7,10 +7,11 @@ define(function () {
     $scope.model = {
       label: '',
       type: 'B',
-      duration: '15'
+      duration: ''
     };
 
     $scope.ok = function () {
+      debugger;
       if (getFormCtrl().$valid) {
         $scope.$close($scope.model);
       }

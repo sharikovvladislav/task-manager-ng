@@ -1,19 +1,18 @@
 <div class="modal-header">
   <h3 class="modal-title">Add task</h3>
 </div>
+<form name="AddTaskForm" class="form-inline" validate-form>
 <div class="modal-body">
-  <form name="AddTaskForm" class="form-inline">
     <div class="form-group">
-      <label class="sr-only" for="name">Email address</label>
       <input type="text"
              class="form-control"
              id="name"
              placeholder="Название"
              ng-model="model.label"
+             autofocus
              required>
     </div>
     <div class="form-group">
-      <label class="sr-only" for="expectedDuration">Время</label>
       <input type="text"
              class="form-control"
              id="expectedDuration"
@@ -21,10 +20,18 @@
              ng-model="model.duration"
              required>
     </div>
-  </form>
+    <div class="form-group">
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="model.type" uib-btn-radio="'A'">A</label>
+        <label class="btn btn-success" ng-model="model.type" uib-btn-radio="'B'">B</label>
+        <label class="btn btn-info" ng-model="model.type" uib-btn-radio="'C'">C</label>
+        <label class="btn btn-default" ng-model="model.type" uib-btn-radio="'D'">D</label>
+      </div>
+    </div>
   Selected: <pre>{{ model | json }}</pre>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+  <button class="btn btn-primary" type="submit" form-submit="ok()" pre-validate>OK</button>
   <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
 </div>
+</form>
