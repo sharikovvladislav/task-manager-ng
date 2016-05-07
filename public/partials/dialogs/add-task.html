@@ -1,7 +1,7 @@
 <div class="modal-header">
   <h3 class="modal-title">Add task</h3>
 </div>
-<form name="AddTaskForm" class="form-inline" validate-form>
+<form name="AddTaskForm" class="form-inline">
 <div class="modal-body">
     <div class="form-group">
       <input type="text"
@@ -31,7 +31,7 @@
   Selected: <pre>{{ model | json }}</pre>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="submit" form-submit="ok()" pre-validate>OK</button>
+  <button class="btn btn-primary" type="submit" ng-click="ok()">OK</button>
   <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
 </div>
 </form>
