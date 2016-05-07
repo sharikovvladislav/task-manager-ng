@@ -1,8 +1,5 @@
 <div>
   <div class="simpleDemo col-md-12">
-    <div class="row">
-      <button class="btn btn-default" ng-click="onAddTaskButtonClick();">Add task</button>
-    </div>
     <div class="row" ng-repeat="list in model.lists">
       <h4>{{list.name}}</h4>
       <div ng-include="'partials/helpers/list.html'"></div>

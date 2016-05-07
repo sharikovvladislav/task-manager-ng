@@ -1,4 +1,15 @@
 <ul dnd-list="list.items">
+  <li style="display: flex;">
+    <div style="display: inline-block; width: 300px;">
+      <a ng-click="onAddTaskButtonClick(list.code);">
+        <span class="glyphicon glyphicon-plus"></span>
+        Добавить задачу
+      </a>
+    </div>
+    <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
+    <div style="display: inline-block; width: 40px;"><span>&nbsp;</span></div>
+    <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
+  </li>
   <li ng-repeat="item in list.items"
       dnd-draggable="item"
       dnd-moved="list.items.splice($index, 1)"

@@ -11,6 +11,7 @@ define(function () {
       selected: null,
       lists: [{
         name: 'Today',
+        code: 'today',
         items: [
           {
             label: 'Рассчитать количество возможных вариантов исхода вселенной',
@@ -40,6 +41,7 @@ define(function () {
         ]
       }, {
         name: 'Backlog',
+        code: 'backlog',
         items: []
       }]
     };
@@ -52,14 +54,14 @@ define(function () {
       });
     }
 
-    $scope.onAddTaskButtonClick = function () {
+    $scope.onAddTaskButtonClick = function (typeOfList) {
       var modalInstance = $dialog.open({
         templateUrl: 'partials/dialogs/add-task.html',
         controller: 'tm.add'
       });
 
       modalInstance.result.then(function (newTask) {
-        $scope.model.lists[0].items.push(newTask);
+        $scope.model.lists[typeOfList === 'backlog' ? 1 : 0].items.push(newTask);
       });
     };
   }
