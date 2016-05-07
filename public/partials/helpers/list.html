@@ -12,7 +12,7 @@
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
   </li>
 </ul>
-<ul dnd-list="list.items">
+<ul dnd-list="list.items" ng-class="{ 'dashed-border': list.items.length === 0 }">
   <li ng-repeat="item in list.items"
       dnd-draggable="item"
       dnd-moved="list.items.splice($index, 1)"
@@ -31,6 +31,7 @@
   <li class="dndPlaceholder">
     Drop item here
   </li>
+  <li ng-if="list.items.length === 0" class="drop-item-here"><h3 style="margin: 0; text-align: center">Drop task here!</h3></li>
 </ul>
 <ul dnd-list>
   <li style="display: flex;">

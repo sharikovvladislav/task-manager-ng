@@ -3,6 +3,16 @@ body {
     padding-top: 70px;
 }
 
+ul.dashed-border {
+    border: dashed #ccc 2px;
+}
+
+li.drop-item-here {
+    background-color: transparent !important;
+    border: none;
+    color: #ccc;
+}
+
 a.no-underline:hover {
     text-decoration: none;
 }
