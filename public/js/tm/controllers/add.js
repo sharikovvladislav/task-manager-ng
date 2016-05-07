@@ -7,7 +7,7 @@ define(function () {
     $scope.model = {
       label: '',
       type: 'B',
-      duration: ''
+      duration: null
     };
 
     $scope.ok = function () {

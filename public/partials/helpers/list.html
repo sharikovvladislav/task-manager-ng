@@ -1,7 +1,7 @@
 <ul dnd-list="list.items">
   <li style="display: flex;">
     <div style="display: inline-block; width: 300px;">
-      <a ng-click="onAddTaskButtonClick(list.code);">
+      <a ng-click="onAddTaskButtonClick(list.items);">
         <span class="glyphicon glyphicon-plus"></span>
         Добавить задачу
       </a>
@@ -10,6 +10,7 @@
     <div style="display: inline-block; width: 40px;"><span>&nbsp;</span></div>
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
   </li>
+
   <li ng-repeat="item in list.items"
       dnd-draggable="item"
       dnd-moved="list.items.splice($index, 1)"
@@ -20,16 +21,17 @@
   >
     <div style="display: inline-block; width: 30px;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
     <div style="display: inline-block; width: 100%;">{{item.label}}</div>
-    <div style="display: inline-block; width: 40px; text-align: right;"><span class="badge">{{item.duration}}</span></div>
-    <div style="display: inline-block; width: 30px; text-align: center;"><span class="glyphicon glyphicon-ok"></span></div>
+    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{item.duration || 0}}</span></div>
+    <div style="display: inline-block; width: 40px; text-align: center;"><span class="glyphicon glyphicon-ok"></span></div>
   </li>
   <li class="dndPlaceholder">
     Drop item here
   </li>
+
   <li style="display: flex;">
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
     <div style="display: inline-block; width: 100%;"><span>&nbsp;</span></div>
-    <div style="display: inline-block; width: 40px; text-align: right;"><span class="badge">SUM</span></div>
-    <div style="display: inline-block; width: 30px; text-align: center;"><span>4/5</span></div>
+    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{ list.summaryTime }}</span></div>
+    <div style="display: inline-block; width: 40px; text-align: center;"><span>&nbsp;</span></div>
   </li>
 </ul>
