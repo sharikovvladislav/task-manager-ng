@@ -18,13 +18,15 @@
       dnd-moved="list.items.splice($index, 1)"
       dnd-effect-allowed="move"
       dnd-selected="model.selected = item"
-      ng-class="{'selected': model.selected === item}"
+      ng-class="{ 'selected': model.selected === item, 'task-is-done': item.isDone }"
       style="display: flex; justify-content: space-around;"
   >
     <div style="display: inline-block; width: 30px;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
     <div style="display: inline-block; width: 100%;">{{item.label}}</div>
     <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{item.duration | humanizeTime }}</span></div>
-    <div style="display: inline-block; width: 40px; text-align: center;"><span class="glyphicon glyphicon-ok"></span></div>
+    <div style="display: inline-block; width: 40px; text-align: center;" ng-click="item.isDone = !item.isDone">
+      <span class="glyphicon" ng-class="{'glyphicon-ok': !item.isDone, 'glyphicon-remove': item.isDone}"></span>
+    </div>
   </li>
   <li class="dndPlaceholder">
     Drop item here

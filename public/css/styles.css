@@ -50,6 +50,10 @@ a.no-underline:hover {
     min-height: 42px;
 }
 
+li.task-is-done {
+    background-color: rgba(38, 204, 88, 0.12) !important;
+}
+
 /**
  * The dnd-lists's child elements currently MUST have
  * position: relative. Otherwise we can not determine

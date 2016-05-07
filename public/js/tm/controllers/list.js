@@ -18,27 +18,32 @@ define(function () {
           {
             label: 'Рассчитать количество возможных вариантов исхода вселенной',
             duration: 30,
-            type: 'A'
+            type: 'A',
+            isDone: false
           },
           {
-            label: 'Найти виновата в проблеме с ежиками',
+            label: 'Найти виноватого в проблеме с ежиками',
             duration: 120,
-            type: 'B'
+            type: 'B',
+            isDone: true
           },
           {
             label: 'Погуглить ту смешную фразу',
             duration: 45,
-            type: 'D'
+            type: 'D',
+            isDone: false
           },
           {
             label: 'Поинтересоваться у крокодилов сколько времени',
             duration: 15,
-            type: 'A'
+            type: 'A',
+            isDone: false
           },
           {
             label: 'Помочь еноту с решением математических задач',
             duration: 60,
-            type: 'C'
+            type: 'C',
+            isDone: false
           }
         ]
       }, {
