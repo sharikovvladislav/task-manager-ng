@@ -11,7 +11,6 @@ define(function () {
     };
 
     $scope.ok = function () {
-      debugger;
       if (getFormCtrl().$valid) {
         $scope.$close($scope.model);
       }
