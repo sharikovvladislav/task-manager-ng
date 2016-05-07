@@ -3,6 +3,10 @@ body {
     padding-top: 70px;
 }
 
+a.no-underline:hover {
+    text-decoration: none;
+}
+
 .jumbotron {
     overflow: auto;
 }
@@ -61,6 +65,10 @@ body {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
+}
+
+.simpleDemo ul[dnd-list] li:hover {
+    background-color: rgba(11, 107, 165, 0.2);
 }
 
 /**
