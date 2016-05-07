@@ -23,7 +23,7 @@
   >
     <div style="display: inline-block; width: 30px;"> <span class="label" tm-task-type-adder="item">{{item.type}}</span></div>
     <div style="display: inline-block; width: 100%;">{{item.label}}</div>
-    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{item.duration || 0}}</span></div>
+    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{(item.duration || 0) | humanizeTime }}</span></div>
     <div style="display: inline-block; width: 40px; text-align: center;"><span class="glyphicon glyphicon-ok"></span></div>
   </li>
   <li class="dndPlaceholder">
@@ -34,7 +34,7 @@
   <li style="display: flex;">
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
     <div style="display: inline-block; width: 100%;"><span>&nbsp;</span></div>
-    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{ list.summaryTime }}</span></div>
+    <div style="display: inline-block; width: 40px; text-align: right; margin-right: 20px;"><span class="badge">{{ list.summaryTime | humanizeTime }}</span></div>
     <div style="display: inline-block; width: 40px; text-align: center;"><span>&nbsp;</span></div>
   </li>
 </ul>
