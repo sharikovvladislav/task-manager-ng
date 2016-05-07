@@ -1,4 +1,5 @@
-<ul dnd-list="list.items">
+
+<ul dnd-list>
   <li style="display: flex;">
     <div style="display: inline-block; width: 300px;">
       <a ng-click="onAddTaskButtonClick(list.items);">
@@ -10,7 +11,8 @@
     <div style="display: inline-block; width: 40px;"><span>&nbsp;</span></div>
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
   </li>
-
+</ul>
+<ul dnd-list="list.items">
   <li ng-repeat="item in list.items"
       dnd-draggable="item"
       dnd-moved="list.items.splice($index, 1)"
@@ -27,7 +29,8 @@
   <li class="dndPlaceholder">
     Drop item here
   </li>
-
+</ul>
+<ul dnd-list>
   <li style="display: flex;">
     <div style="display: inline-block; width: 30px;"><span>&nbsp;</span></div>
     <div style="display: inline-block; width: 100%;"><span>&nbsp;</span></div>
