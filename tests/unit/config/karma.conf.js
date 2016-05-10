@@ -12,18 +12,21 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine', 'requirejs'],
 
-
     // list of files / patterns to load in the browser
     files: [
       'tests/unit/config/test-main.js',
+      {pattern: 'public/components/**/*.js', included: false},
       {pattern: 'public/js/**/*.js', included: false},
       {pattern: 'tests/unit/**/*.spec.js', included: false}
     ],
 
+    proxies: {
+      '/': 'http://localhost:9876/base/public/js/',
+      '/lib/components/': 'http://localhost:9876/base/public/components/'
+    },
 
     // list of files to exclude
     exclude: [
-      'public/components/**'
     ],
 
 
