@@ -1,16 +1,15 @@
-Preconditions
-===
+### Preconditions
+
 [Node.js](https://nodejs.org/) must be installed on your computer.
 
-Clone
-=====
+### 1 Clone
+
 ```git clone https://github.com/sharikovvladislav/task-manager-ng.git```
 
-Install dependencies
-=====
+### 2 Install dependencies
+
 ```npm install && bower install```
 
-Start the application
-=====
+### 3 Start the application
 
 ```grunt run```
