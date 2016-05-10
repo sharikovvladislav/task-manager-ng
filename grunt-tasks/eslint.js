@@ -11,7 +11,7 @@ module.exports = function () {
           'indent': [2, 2, {
             SwitchCase: 1
           }],
-          'max-len': [1, 120, 4, {
+          'max-len': [2, 120, 4, {
             ignoreComments: true,
             ignoreUrls: true
           }]
