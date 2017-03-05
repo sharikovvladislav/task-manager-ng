@@ -2,8 +2,9 @@ define(['settings/settings.ctrl', 'text!settings/settings.view.html'], function 
   return angular.module('settings.router.config', ['ui.router', 'settings.ctrl'])
       .config(function ($stateProvider) {
         $stateProvider.state({
-          name: 'main.settings',
+          name: 'settings',
           url: 'settings',
+          parent: 'main',
           controller: 'settings.ctrl',
           template: view
         });
