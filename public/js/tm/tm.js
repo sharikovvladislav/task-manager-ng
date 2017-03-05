@@ -2,7 +2,7 @@ define([
   'require', 'angular',
   'tm/services/services', 'tm/directives/directives',
   'tm/controllers/controllers', 'tm/factories/factories',
-  'tm/filters/filters'
+  'tm/filters/filters', 'tm/router.config'
 ], function (require) {
   'use strict';
 

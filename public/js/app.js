@@ -1,5 +1,5 @@
 define([
-  'angular', 'window', 'routes.config', 'main/main', 'common/common', 'tm/tm', 'settings/settings'
+  'angular', 'window', 'main/router', 'main/main', 'common/common', 'tm/tm', 'settings/settings'
 ], function (angular, window, routerConfigurator) {
   'use strict';
 
