@@ -1,14 +1,18 @@
 define([
-  'require', 'angular',
-  'tm/services/services', 'tm/directives/directives',
-  'tm/controllers/controllers', 'tm/factories/factories',
-  'tm/filters/filters', 'tm/router.config'
-], function (require) {
+  'tm/add.controller', 'tm/humanizeTime.filter', 'tm/list.controller', 'tm/router.config'
+], function () {
   'use strict';
 
-  var angular = require('angular');
+  var angular = require('angular'),
+      module = angular.module('tm',
+          ['ngRoute', 'ui.bootstrap', 'tm.router.config']
+      );
 
-  return angular.module('tm',
-    ['ngRoute', 'tm.services', 'tm.controllers', 'tm.directives', 'tm.factories', 'tm.filters', 'ui.bootstrap', 'tm.router.config']
-  );
+  for (var i = 0; i < arguments.length; i++) {
+    if (angular.isFunction(arguments[i])) {
+      arguments[i](module);
+    }
+  }
+      
+  return module;
 });
