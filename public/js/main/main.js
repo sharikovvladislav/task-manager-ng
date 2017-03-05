@@ -1,9 +1,17 @@
 define([
-  'require', 'angular'
-], function (require) {
+  'main/router.config'
+], function () {
   'use strict';
 
-  var angular = require('angular');
+  var angular = require('angular'),
+      module = angular.module('main', ['ngRoute']);
 
-  return angular.module('main', ['ngRoute']);
+  debugger;
+  for (var i = 0; i < arguments.length; i++) {
+    if (angular.isFunction(arguments[i])) {
+      arguments[i](module);
+    }
+  }
+  
+  return module;
 });
