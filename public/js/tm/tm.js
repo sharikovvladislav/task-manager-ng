@@ -9,6 +9,6 @@ define([
   var angular = require('angular');
 
   return angular.module('tm',
-    ['ngRoute', 'tm.services', 'tm.controllers', 'tm.directives', 'tm.factories', 'tm.filters']
+    ['ngRoute', 'tm.services', 'tm.controllers', 'tm.directives', 'tm.factories', 'tm.filters', 'ui.bootstrap']
   );
 });

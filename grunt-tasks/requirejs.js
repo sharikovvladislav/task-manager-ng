@@ -13,7 +13,10 @@ module.exports = function () {
         mainConfigFile: "public/js/bootstrap.js",
         name: 'bootstrap',
         out: "build/js/bootstrap.js",
-        optimize: 'uglify2'
+        optimize: 'uglify2',
+        generateSourceMaps: true,
+        useSourceUrl: true,
+        preserveLicenseComments: false
       }
     }
   }
