@@ -3,7 +3,7 @@ define(['settings/settings.ctrl', 'text!settings/settings.view.html'], function 
       .config(function ($stateProvider) {
         $stateProvider.state({
           name: 'main.settings',
-          url: '/settings',
+          url: 'settings',
           controller: 'settings.ctrl',
           template: view
         });

@@ -1,10 +1,10 @@
-define(['text!main/main.html'], function (view) {
+define(['text!main/main.html'], function (mainTemplate) {
   return function (module) {
     module.config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider.state({
         name: 'main',
         url: '/',
-        template: view
+        template: mainTemplate
       });
       $urlRouterProvider.otherwise('/tm');
     });

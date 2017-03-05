@@ -3,7 +3,7 @@ define(['text!tm/task-manager.view.html'], function (view) {
       .config(function ($stateProvider) {
         $stateProvider.state({
           name: 'main.tm',
-          url: '/tm',
+          url: 'tm',
           controller: 'tm.list',
           template: view
         });
