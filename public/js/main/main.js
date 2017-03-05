@@ -6,7 +6,6 @@ define([
   var angular = require('angular'),
       module = angular.module('main', ['ngRoute']);
 
-  debugger;
   for (var i = 0; i < arguments.length; i++) {
     if (angular.isFunction(arguments[i])) {
       arguments[i](module);
