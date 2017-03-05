@@ -26,6 +26,7 @@
     "grunt-eslint": "^18.1.0",
     "grunt-karma": "^1.0.0",
     "grunt-processhtml": "^0.3.8",
+    "jasmine-core": "^2.5.2",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
