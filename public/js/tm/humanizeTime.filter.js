@@ -1,9 +1,7 @@
-define(function () {
-  function HumanizeTimeFilter () {
-    return function (input) {
-      var hours = Math.floor(input/60),
-        minutes = 0,
-        result = '';
+define(function() {
+  function HumanizeTimeFilter() {
+    return function(input) {
+      var hours = Math.floor(input / 60), minutes = 0, result = '';
 
       if (hours >= 1) {
         minutes = input - 60 * hours;
@@ -23,10 +21,10 @@ define(function () {
       }
 
       return result;
-    }
+    };
   }
 
-  return function (module) {
+  return function(module) {
     module.filter('humanizeTime', HumanizeTimeFilter);
   };
 });

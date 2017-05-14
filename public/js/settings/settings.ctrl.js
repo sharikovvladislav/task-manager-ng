@@ -1,10 +1,11 @@
-define(function () {
+define(function() {
   SettingsCtrl.$inject = ['$scope'];
-  function SettingsCtrl ($scope) {
+  function SettingsCtrl($scope) {
     $scope.model = {};
     $scope.model.name = 'Мир';
   }
-  
-  return angular.module('settings.ctrl', [])
-      .controller('settings.ctrl', SettingsCtrl);
+
+  return angular
+    .module('settings.ctrl', [])
+    .controller('settings.ctrl', SettingsCtrl);
 });

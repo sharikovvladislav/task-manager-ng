@@ -1,30 +1,30 @@
 /**
  * Created by Vlad on 05.05.2016.
  */
-define(function () {
+define(function() {
   TaskAddCtrl.$inject = ['$scope'];
-  function TaskAddCtrl ($scope) {
+  function TaskAddCtrl($scope) {
     $scope.model = {
       label: '',
       type: 'B',
       duration: null
     };
 
-    $scope.ok = function () {
+    $scope.ok = function() {
       if (getFormCtrl().$valid) {
         $scope.$close($scope.model);
       }
     };
-    $scope.cancel = function () {
+    $scope.cancel = function() {
       $scope.$dismiss();
     };
 
-    function getFormCtrl () {
+    function getFormCtrl() {
       return $scope.AddTaskForm;
     }
   }
 
-  return function (module) {
+  return function(module) {
     module.controller('tm.add', TaskAddCtrl);
-  }
+  };
 });

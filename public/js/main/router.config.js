@@ -1,6 +1,6 @@
-define(['text!main/main.html'], function (mainTemplate) {
-  return function (module) {
-    module.config(function ($stateProvider, $urlRouterProvider) {
+define(['text!main/main.html'], function(mainTemplate) {
+  return function(module) {
+    module.config(function($stateProvider, $urlRouterProvider) {
       $stateProvider.state({
         name: 'main',
         url: '/',
@@ -8,5 +8,5 @@ define(['text!main/main.html'], function (mainTemplate) {
       });
       $urlRouterProvider.otherwise('/tm');
     });
-  }
+  };
 });
