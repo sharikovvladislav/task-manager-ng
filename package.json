@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-commit": "grunt pre-commit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "pre-commit": [
-    "pre-commit"
-  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
