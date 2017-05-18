@@ -12,11 +12,15 @@ It is Task Manager. Project use GruntJS as task manager.
 
 ### 2 Install dependencies
 
-```npm install && bower install```
+```yarn install && bower install```
 
 ### 3 Start the application
 
 ```grunt run```
+
+### Tests
+
+```grunt karma```
 
 ### Grunt tasks
 - build - build the application (built application will be stored under `/build`
