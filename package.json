@@ -1,8 +1,7 @@
 {
   "name": "task-manager-ng",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Just another simple task manager",
   "scripts": {
     "test": "grunt karma",
     "precommit": "lint-staged"
@@ -13,8 +12,8 @@
       "git add"
     ]
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sharikov Vladislav <sharikov.vladislav@gmail.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "bower": "^1.6.9",
     "grunt": "^0.4.5",
