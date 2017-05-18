@@ -11,34 +11,39 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   }
 });
 
-var testDeps = ['angular-mocks', 'ngBootstrapWithTemplates'];
-define('window', function () {
+var testDeps = ["angular-mocks", "ngBootstrapWithTemplates", "angularUiRouter"];
+define("window", function() {
   return document.window;
 });
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
-  baseUrl: '/',
+  baseUrl: "/",
 
   paths: {
-    'angular': 'lib/components/angular/angular',
-    'angular-mocks': 'lib/components/angular-mocks/angular-mocks',
-    'ngRoute': 'lib/components/angular-route/angular-route',
-    'ngBootstrapWithTemplates': 'lib/components/angular-bootstrap/ui-bootstrap-tpls',
-    'moment': 'lib/components/moment/moment',
+    angular: "lib/components/angular/angular",
+    "angular-mocks": "lib/components/angular-mocks/angular-mocks",
+    angularUiRouter: "lib/components/angular-ui-router/release/angular-ui-router",
+    ngRoute: "lib/components/angular-route/angular-route",
+    ngBootstrapWithTemplates: "lib/components/angular-bootstrap/ui-bootstrap-tpls",
+    moment: "lib/components/moment/moment",
+    text: "lib/components/text/text"
   },
 
   shim: {
-    'ngRoute': {
-      deps: ['angular']
+    ngRoute: {
+      deps: ["angular"]
     },
-    'angular-mocks': {
-      deps: ['ngRoute']
+    angularUiRouter: {
+      deps: ["angular"]
+    },
+    "angular-mocks": {
+      deps: ["ngRoute"]
     },
     ngBootstrapWithTemplates: {
-      deps: ['angular']
+      deps: ["angular"]
     },
-    'angular': {
-      exports: 'angular'
+    angular: {
+      exports: "angular"
     }
   },
 
@@ -46,9 +51,9 @@ require.config({
   deps: testDeps,
 
   // we have to kickoff jasmine, as it is asynchronous
-  callback: function () {
-    require(['app'], function () {
-      require(allTestFiles, function () {
+  callback: function() {
+    require(["app"], function() {
+      require(allTestFiles, function() {
         window.__karma__.start();
       });
     });
