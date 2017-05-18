@@ -29,5 +29,8 @@
     "text": "^2.0.15",
     "angular-ui-router": "^0.4.2",
     "angular": "1.5.x"
+  },
+  "resolutions": {
+    "angular": "1.5.x"
   }
 }
