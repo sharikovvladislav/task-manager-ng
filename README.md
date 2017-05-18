@@ -1,3 +1,6 @@
+### Status
+[![Build Status](https://travis-ci.org/sharikovvladislav/task-manager-ng.svg?branch=master)](https://travis-ci.org/sharikovvladislav/task-manager-ng)
+
 ### Description
 
 It is Task Manager. Project use GruntJS as task manager.
